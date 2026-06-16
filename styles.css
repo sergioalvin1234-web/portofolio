@@ -483,6 +483,17 @@ table th {
   margin: 0 0 0.5rem;
   color: inherit;
   font-size: 0.95rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.meta-icon svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 1rem;
+  margin-top: 0.15rem;
+  color: inherit;
 }
 
 /* Responsive two-column layout for meta details on wide screens */

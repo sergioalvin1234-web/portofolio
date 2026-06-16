@@ -1,0 +1,1 @@
+Applying meta-icon SVG additions to proyecto and sershop pages and CSS.
