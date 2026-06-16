@@ -469,6 +469,51 @@ table th {
   color: var(--muted);
 }
 
+/* Dark meta card used in project detail pages (like SERSHOP) */
+.project-meta-card {
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 360px;
+}
+
+.project-meta-card .meta-inner p {
+  margin: 0 0 0.5rem;
+  color: inherit;
+  font-size: 0.95rem;
+}
+
+/* Responsive two-column layout for meta details on wide screens */
+.project-meta-card .meta-inner {
+  display: grid;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .project-meta-card {
+    max-width: 520px;
+  }
+
+  .project-meta-card .meta-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* keep meta container aligned to the right inside project head */
+  .project-detail .project-meta {
+    justify-content: end;
+  }
+}
+
+/* Heading style to match SERSHOP: slightly larger and stronger */
+.project-detail .project-head h1 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
 .project-overview,
 .project-grid {
   display: grid;
