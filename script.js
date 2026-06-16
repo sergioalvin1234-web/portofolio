@@ -99,7 +99,7 @@ if (contactForm) {
       return;
     }
 
-    alert('Terima kasih, ' + name + '! Pesan Anda telah diterima.');
+    alert('Terima kasih, ' + name + '! tapi maaf fitur ini tidak tersedia silahkan hubungi kontak yang tersedia😊🙏.');
     contactForm.reset();
   });
 }
