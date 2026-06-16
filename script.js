@@ -33,22 +33,47 @@ const pageHeader = document.querySelector('.site-header');
 const revealElements = document.querySelectorAll('.section, .hero-card');
 
 if (revealElements.length) {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  if ('IntersectionObserver' in window) {
+    let visibleCount = 0;
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (!entry.target.classList.contains('visible')) {
+              visibleCount += 1;
+            }
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-  revealElements.forEach((element) => {
-    element.classList.add('reveal-hidden');
-    revealObserver.observe(element);
-  });
+    revealElements.forEach((element) => {
+      element.classList.add('reveal-hidden');
+      revealObserver.observe(element);
+    });
+
+    const revealFallback = setTimeout(() => {
+      revealElements.forEach((element) => {
+        element.classList.add('visible');
+      });
+    }, 250);
+
+    const observerCleanup = new MutationObserver(() => {
+      if (visibleCount >= revealElements.length) {
+        clearTimeout(revealFallback);
+        observerCleanup.disconnect();
+      }
+    });
+
+    observerCleanup.observe(document.body, { attributes: true, subtree: true });
+  } else {
+    revealElements.forEach((element) => {
+      element.classList.add('visible');
+    });
+  }
 }
 
 window.addEventListener('scroll', () => {
