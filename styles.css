@@ -488,6 +488,17 @@ table th {
   align-items: flex-start;
 }
 
+.project-meta-card a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-meta-card a:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}
+
 .meta-icon svg {
   width: 1rem;
   height: 1rem;
