@@ -28,7 +28,6 @@
       <div class="container">
         <div class="project-head">
           <div id="details">
-            <p class="eyebrow">Proyek Web</p>
             <h1>Web Informasi Bengkel</h1>
             <p class="muted">Situs bengkel motor & mobil untuk menampilkan layanan, galeri, kontak, dan fitur booking online dengan konfirmasi melalui WhatsApp.</p>
           </div>
@@ -48,37 +47,47 @@
 
         <section class="section project-section">
           <h2>Ringkasan Proyek</h2>
-          <p>Ini adalah proyek website informasi bengkel yang dibuat untuk memudahkan pelanggan menemukan layanan servis mobil dan motor, melihat galeri hasil pekerjaan, menghubungi lewat WhatsApp, dan membuat booking layanan secara online.</p>
+          <div class="project-card project-meta-card">
+            <div class="meta-inner">
+              <p>Ini adalah proyek website informasi bengkel yang dibuat untuk memudahkan pelanggan menemukan layanan servis mobil dan motor, melihat galeri hasil pekerjaan, menghubungi lewat WhatsApp, dan membuat booking layanan secara online.</p>
+            </div>
+          </div>
         </section>
 
         <section id="tech" class="section project-section">
           <h2>Halaman Utama</h2>
-          <ul>
-            <li><strong>index.html</strong> — hero, fitur singkat, galeri, footer, dan skrip client untuk menyiapkan pengiriman booking serta membuat tautan WhatsApp.</li>
-            <li><strong>booking.html</strong> — formulir cepat (nama, WA, jenis kendaraan, layanan, catatan) yang dikirim via fetch ke API lokal.</li>
-            <li><strong>layanan.html</strong> — daftar layanan bengkel seperti servis rutin, perbaikan mesin, rem/suspensi, dan diagnosa elektronik.</li>
-            <li><strong>kontak.html</strong> — alamat, nomor WA, jam operasional, dan tombol chat WA.</li>
-          </ul>
+          <div class="project-card project-meta-card">
+            <div class="meta-inner">
+              <p><strong>index.html</strong> — hero, fitur singkat, galeri, footer, dan skrip client untuk menyiapkan pengiriman booking serta membuat tautan WhatsApp.</p>
+              <p><strong>booking.html</strong> — formulir cepat (nama, WA, jenis kendaraan, layanan, catatan) yang dikirim via fetch ke API lokal.</p>
+              <p><strong>layanan.html</strong> — daftar layanan bengkel seperti servis rutin, perbaikan mesin, rem/suspensi, dan diagnosa elektronik.</p>
+              <p><strong>kontak.html</strong> — alamat, nomor WA, jam operasional, dan tombol chat WA.</p>
+            </div>
+          </div>
         </section>
 
         <section class="section project-section">
           <h2>Backend & Penyimpanan</h2>
-          <p>Server Express dijalankan pada <strong>http://localhost:3000</strong> dengan endpoint:</p>
-          <ul>
-            <li><strong>GET /api/bookings</strong> — ambil daftar booking.</li>
-            <li><strong>POST /api/bookings</strong> — simpan data booking ke <strong>bookings.json</strong>.</li>
-          </ul>
-          <p>Data booking disimpan ke file <strong>bookings.json</strong> (saat ini berisi <code>[]</code>).</p>
+          <div class="project-card project-meta-card">
+            <div class="meta-inner">
+              <p>Server Express dijalankan pada <strong>http://localhost:3000</strong> dengan endpoint:</p>
+              <p><strong>GET /api/bookings</strong> — ambil daftar booking.</p>
+              <p><strong>POST /api/bookings</strong> — simpan data booking ke <strong>bookings.json</strong>.</p>
+              <p>Data booking disimpan ke file <strong>bookings.json</strong> (saat ini berisi <code>[]</code>).</p>
+            </div>
+          </div>
         </section>
 
         <section class="section project-section">
           <h2>Alur Booking</h2>
-          <ol>
-            <li>Pengguna mengisi form di <strong>booking.html</strong>.</li>
-            <li>Form dikirim via <code>POST /api/bookings</code> ke server lokal.</li>
-            <li>Server menyimpan data ke <strong>bookings.json</strong>.</li>
-            <li>Halaman membuat tautan <code>https://wa.me/...</code> untuk melanjutkan chat WhatsApp.</li>
-          </ol>
+          <div class="project-card project-meta-card">
+            <div class="meta-inner">
+              <p>Pengguna mengisi form di <strong>booking.html</strong>.</p>
+              <p>Form dikirim via <code>POST /api/bookings</code> ke server lokal.</p>
+              <p>Server menyimpan data ke <strong>bookings.json</strong>.</p>
+              <p>Halaman membuat tautan <code>https://wa.me/...</code> untuk melanjutkan chat WhatsApp.</p>
+            </div>
+          </div>
         </section>
 
         <section class="section project-section">
