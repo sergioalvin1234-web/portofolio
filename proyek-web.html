@@ -12,16 +12,84 @@
       <a href="index.html" class="logo">Portofolio</a>
       <nav class="site-nav">
         <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="skills.html">Keahlian</a>
+        <a href="projects.html">Proyek</a>
+        <a href="contact.html">Kontak</a>
       </nav>
     </div>
   </header>
   <main>
-    <section class="section">
+    <section class="section project-detail">
       <div class="container">
-        <h1>Proyek Web</h1>
-        <p class="muted">Desain antarmuka modern untuk kebutuhan bisnis dan personal branding.</p>
-        <p>Deskripsi singkat proyek. Tambahkan detail, tantangan, dan hasil yang ingin Anda tunjukkan di sini.</p>
-        <p><a class="button primary" href="index.html">Kembali</a></p>
+        <div class="project-head">
+          <div>
+            <p class="eyebrow">Proyek Web</p>
+            <h1>Web Informasi Bengkel</h1>
+            <p class="muted">Situs bengkel motor & mobil untuk menampilkan layanan, galeri, kontak, dan fitur booking online dengan konfirmasi melalui WhatsApp.</p>
+          </div>
+          <div class="project-meta">
+            <span><strong>Tujuan:</strong> Situs bengkel motor & mobil yang menawarkan informasi layanan, galeri, kontak, dan fitur booking online dengan konfirmasi WhatsApp.</span>
+            <span><strong>Fitur:</strong> hero, layanan, galeri, footer, booking, dan WhatsApp chat.</span>
+          </div>
+        </div>
+
+        <div class="project-screenshot">
+          <img src="bengkel-screenshot.png" alt="Screenshot website bengkel" />
+        </div>
+
+        <section class="section project-section">
+          <h2>Ringkasan Proyek</h2>
+          <p>Ini adalah proyek website informasi bengkel yang dibuat untuk memudahkan pelanggan menemukan layanan servis mobil dan motor, melihat galeri hasil pekerjaan, menghubungi lewat WhatsApp, dan membuat booking layanan secara online.</p>
+        </section>
+
+        <section class="section project-section">
+          <h2>Halaman Utama</h2>
+          <ul>
+            <li><strong>index.html</strong> — hero, fitur singkat, galeri, footer, dan skrip client untuk menyiapkan pengiriman booking serta membuat tautan WhatsApp.</li>
+            <li><strong>booking.html</strong> — formulir cepat (nama, WA, jenis kendaraan, layanan, catatan) yang dikirim via fetch ke API lokal.</li>
+            <li><strong>layanan.html</strong> — daftar layanan bengkel seperti servis rutin, perbaikan mesin, rem/suspensi, dan diagnosa elektronik.</li>
+            <li><strong>kontak.html</strong> — alamat, nomor WA, jam operasional, dan tombol chat WA.</li>
+          </ul>
+        </section>
+
+        <section class="section project-section">
+          <h2>Backend & Penyimpanan</h2>
+          <p>Server Express dijalankan pada <strong>http://localhost:3000</strong> dengan endpoint:</p>
+          <ul>
+            <li><strong>GET /api/bookings</strong> — ambil daftar booking.</li>
+            <li><strong>POST /api/bookings</strong> — simpan data booking ke <strong>bookings.json</strong>.</li>
+          </ul>
+          <p>Data booking disimpan ke file <strong>bookings.json</strong> (saat ini berisi <code>[]</code>).</p>
+        </section>
+
+        <section class="section project-section">
+          <h2>Alur Booking</h2>
+          <ol>
+            <li>Pengguna mengisi form di <strong>booking.html</strong>.</li>
+            <li>Form dikirim via <code>POST /api/bookings</code> ke server lokal.</li>
+            <li>Server menyimpan data ke <strong>bookings.json</strong>.</li>
+            <li>Halaman membuat tautan <code>https://wa.me/...</code> untuk melanjutkan chat WhatsApp.</li>
+          </ol>
+        </section>
+
+        <section class="section project-section">
+          <h2>Catatan Teknis Singkat</h2>
+          <p>Skrip client di <strong>index.html</strong> mengakses elemen form/btn dan hanya bekerja jika halaman itu dimuat atau server Node dijalankan agar request POST berhasil.</p>
+        </section>
+
+        <section class="section">
+          <h2>Jelajahi Halaman Lain</h2>
+          <div class="hero-actions">
+            <a href="index.html" class="button primary">Beranda</a>
+            <a href="about.html" class="button secondary">Tentang</a>
+            <a href="skills.html" class="button secondary">Keahlian</a>
+            <a href="projects.html" class="button secondary">Proyek</a>
+            <a href="contact.html" class="button secondary">Kontak</a>
+          </div>
+        </section>
+
+        <p><a class="button primary" href="projects.html">Kembali ke Proyek</a></p>
       </div>
     </section>
   </main>
